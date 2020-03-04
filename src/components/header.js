@@ -94,7 +94,7 @@ export function SimpleMenu() {
           <Link to="/trivia">Game</Link>
         </MenuItem>
         <MenuItem onClick={handleClose}>
-          <Link to="/page-2">Settings</Link>
+          <Link to="/settings">Settings</Link>
         </MenuItem>
       </Menu>
     </div>
