@@ -79,21 +79,15 @@ export default function({ url }) {
       return answers.sort(() => Math.random() - 0.5)
     }
   }
-  const controller = new AbortController()
+
   useEffect(() => {
     if (url !== "") {
       getQuestion()
-    }
-    return () => {
-      controller.abort()
     }
   }, [url])
   useEffect(() => {
     if (questionData.length >= 1) {
       setPossibleAnswers(questionData && getAnswers(questionData[0]))
-    }
-    return () => {
-      controller.abort()
     }
   }, [questionData])
 
